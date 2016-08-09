@@ -97,7 +97,7 @@ function addScore(){
 	score++;
 }
 function makeBall(){
-		arrBall.push({x : randomInt(1024), y : 0, go_x : goX(), go_y : goY()});
+	arrBall.push({x : randomInt(1024), y : 0, go_x : goX(), go_y : goY()});
 }
 
 function onGameOver(){
@@ -123,11 +123,10 @@ function moveBall(){
 			onGameOver();
 		if(arrBall[i].x<-50 || arrBall[i].x>1100||
 		   arrBall[i].y<-100|| arrBall[i].y>800){
-		   	arrBall[i].x = randomInt(1024);
+		   arrBall[i].x = randomInt(1024);
 		   arrBall[i].y = 0;
 		   arrBall[i].go_x = goX();
 		   arrBall[i].go_y = goY();
-
 		}
 	}
 	drawScreen();
